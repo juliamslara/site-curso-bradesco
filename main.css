@@ -1,49 +1,119 @@
-body { font-family: monospace; }
-ul { font-family: Arial, Helvetica, sans-serif;}
+body {
+  font-family: monospace;
+  text-align: center;
+ 
+}
+ul {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
 li {
+  list-style: circle;
+  text-align: center;
+  max-width: 150px;
+  font-size: 15px;
+  
+}
+.li:hover {
+  transition: all 0.5s ease;
+  font-size: 18px;
+}
 
-    list-style: circle;
-    
-    }
-    
-    .list {
-    
-    list-style: square;
-    
-    }
+.list {
+  list-style: circle;
+  text-align: center;
+}
 
-    .light-theme {
+.light-theme {
+  --bg: var var(--green);
+  --fontColor: var(--black);
+}
+:root {
+  --green: #ffffff;
+  --white: #ffffff;
+  --black: #000000;
+}
+* {
+  color: var(--fontColor);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: var(--bg);
+  position: 50px;
+  text-align: center;
+}
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--green);
+}
+.btn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--btnBorder);
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
 
-        --bg: var var(--green);
-        --fontColor: var(--black);
-        
-        }
-        :root {
-            --green: #00FF00;
-            --white: #FFFFFF;
-            --black: #000000;
-        }
-        * {
-            color: var(--fontColor);
-            font-family:Arial, Helvetica, sans-serif;
+.btn:focus {
+  outline-style: 1px solid var(--btnBorder);
+}
 
-        }
-        body {
-            background-color: var(--bg);
-        }
-        .dark-theme {
-            --bg: var(--black);
-            --fontColor: var(--green);
-        }
-        .bnt {
-            position: absolute;
-            top: 20px;
-            left: 250px;
-            height:50px;
-            width:50px;
-            border-radius: 50%;
-            border: none;
-            color: var[--btnFontColor];
-            background-color: var(--btnBg);
-        }
-        .btn:focus { outline-style: none;}
+.btn:hover {
+  background-color: var(--btnBgHover);
+  color: var(--btnFontColorHover);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.light-theme .btn {
+  color: #f0c14b;
+  background-color: #000000;
+  border-color: #f0c14b;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .btn {
+  color: #333;
+  background-color: #f0c14b;
+  border-color: #333;
+  transition: all 0.3s ease;
+}
+
+.light-theme .btn:hover {
+  background-color: #f0c14b;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .btn:hover {
+  background-color: #333;
+  color: #f0c14b;
+  transition: all 0.3s ease;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100vw; /* Define a largura total da tela */
+  
+
+}
+
+.container p {
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+  margin: auto; /* Centraliza o conteúdo verticalmente */
+  font-size: 20px;
+  font-weight: bold;
+  
+  margin: 10px;
+  padding: 0;
+}
+
